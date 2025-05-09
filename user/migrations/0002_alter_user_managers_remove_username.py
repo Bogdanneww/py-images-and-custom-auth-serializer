@@ -1,5 +1,5 @@
 from django.db import migrations, models
-import user.models
+from user.models import UserManager
 
 
 class Migration(migrations.Migration):
@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
         migrations.AlterModelManagers(
             name='user',
             managers=[
-                ('objects', user.models.UserManager()),
+                ('objects', UserManager()),
             ],
         ),
         migrations.RemoveField(
